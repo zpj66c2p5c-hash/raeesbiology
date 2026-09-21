@@ -1,122 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Raees | Biological Sciences</title>
+<title>Raees | Biological Sciences</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 25px;
-            line-height: 1.6;
-            color: #222;
-        }
+<style>
 
-        h1 {
-            font-size: 42px;
-            margin-bottom: 5px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        h2 {
-            margin-top: 50px;
-        }
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f7f8f6;
+    color: #172019;
+    line-height: 1.7;
+}
 
-        .subtitle {
-            font-size: 20px;
-            color: #555;
-        }
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 28px;
+}
 
-        .paper {
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
-        }
+/* Navigation */
 
-        .paper h3 {
-            margin-bottom: 5px;
-        }
+nav {
+    padding: 24px 0;
+    border-bottom: 1px solid #dfe4df;
+}
 
-        a {
-            color: #1769aa;
-            text-decoration: none;
-        }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
 
-        footer {
-            margin-top: 70px;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+.nav-links a {
+    margin-left: 24px;
+    color: #34443a;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #2d7047;
+}
+
+/* Hero */
+
+.hero {
+    padding: 95px 0 80px;
+}
+
+.eyebrow {
+    color: #2d7047;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(48px, 8vw, 78px);
+    line-height: 1;
+    margin: 18px 0;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    max-width: 720px;
+    font-size: 20px;
+    color: #56615a;
+}
+
+/* Sections */
+
+section {
+    padding: 70px 0;
+    border-top: 1px solid #dfe4df;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.intro {
+    max-width: 750px;
+    font-size: 18px;
+    color: #4f5953;
+}
+
+/* Research interests */
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.interest {
+    border: 1px solid #cbd5cd;
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: white;
+}
+
+/* Papers */
+
+.paper {
+    background: white;
+    border: 1px solid #dfe4df;
+    padding: 28px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+
+.paper h3 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.paper p {
+    color: #59635c;
+}
+
+.paper a {
+    color: #2d7047;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.project {
+    background: white;
+    padding: 26px;
+    border: 1px solid #dfe4df;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+/* About */
+
+.about {
+    max-width: 750px;
+}
+
+/* Footer */
+
+footer {
+    padding: 40px 0;
+    border-top: 1px solid #dfe4df;
+    color: #7a827c;
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .nav {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <h1>Raees</h1>
+<nav>
+<div class="container nav">
 
-    <p class="subtitle">
-        Biological Sciences · Imperial College London
-    </p>
+<div class="logo">
+RAEES
+</div>
 
-    <p>
-        Welcome to my independent biological sciences portfolio.
-        I use this space to explore biological questions through
-        scientific writing, literature research and independent projects.
-    </p>
+<div class="nav-links">
+<a href="#research">Research</a>
+<a href="#papers">Papers</a>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+</div>
 
-    <h2>Research Interests</h2>
+</div>
+</nav>
 
-    <p>
-        My current interests include microbiology, biochemistry,
-        evolutionary biology, microbial ecology and quantitative biology.
-    </p>
 
-    <h2>Independent Research</h2>
+<main>
 
-    <div class="paper">
-        <h3>Why Does pH Affect Enzyme Activity?</h3>
-        <p>
-            Exploring the relationship between protein structure,
-            enzyme kinetics and environmental conditions.
-        </p>
-        <p><a href="#">Read paper →</a></p>
-    </div>
+<!-- HERO -->
 
-    <div class="paper">
-        <h3>Why Do Bacteria Ferment in the Presence of Oxygen?</h3>
-        <p>
-            An exploration of bacterial metabolism, respiration,
-            fermentation and metabolic trade-offs.
-        </p>
-        <p><a href="#">Read paper →</a></p>
-    </div>
+<div class="container hero">
 
-    <div class="paper">
-        <h3>Beyond the Tree of Life</h3>
-        <p>
-            Exploring horizontal gene transfer and how it influences
-            our understanding of evolutionary history.
-        </p>
-        <p><a href="#">Read paper →</a></p>
-    </div>
+<div class="eyebrow">
+Biological Sciences · Imperial College London
+</div>
 
-    <h2>About</h2>
+<h1>
+Exploring biology<br>
+through research.
+</h1>
 
-    <p>
-        I am studying Biological Sciences at Imperial College London.
-        This portfolio documents my independent reading, scientific
-        writing and developing research interests throughout my degree.
-    </p>
+<p>
+Independent scientific writing, literature research and biological
+projects exploring the mechanisms, interactions and diversity of life.
+</p>
 
-    <footer>
-        © 2026 Raees · Independent Biological Sciences Research
-    </footer>
+</div>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+<div class="container">
+
+<h2>Research interests</h2>
+
+<p class="intro">
+My interests currently span several areas of biological science.
+As I progress through my degree, this section will develop alongside
+my academic interests and research experience.
+</p>
+
+<div class="interests">
+
+<div class="interest">Biochemistry</div>
+<div class="interest">Microbiology</div>
+<div class="interest">Evolution</div>
+<div class="interest">Microbial Ecology</div>
+<div class="interest">Metabolism</div>
+<div class="interest">Systems Biology</div>
+<div class="interest">Molecular Biology</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAPERS -->
+
+<section id="papers">
+
+<div class="container">
+
+<h2>Independent papers</h2>
+
+<p class="intro">
+Literature-based investigations into biological questions,
+developed independently alongside my undergraduate studies.
+</p>
+
+
+<div class="paper">
+
+<h3>
+Why Does pH Affect Enzyme Activity?
+</h3>
+
+<p>
+An exploration of how changes in pH influence protein structure,
+enzyme activity and catalytic function.
+</p>
+
+<a href="#">
+Read paper →
+</a>
+
+</div>
+
+
+<div class="paper">
+
+<h3>
+Why Do Bacteria Ferment in the Presence of Oxygen?
+</h3>
+
+<p>
+Exploring bacterial metabolism, respiration, fermentation,
+NADH regeneration and metabolic trade-offs.
+</p>
+
+<a href="#">
+Read paper →
+</a>
+
+</div>
+
+
+<div class="paper">
+
+<h3>
+Beyond the Tree of Life: Horizontal Gene Transfer
+</h3>
+
+<p>
+Exploring horizontal gene transfer and its implications for
+our understanding of microbial evolution and the history of life.
+</p>
+
+<a href="#">
+Read paper →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2>Projects</h2>
+
+<div class="project-grid">
+
+<div class="project">
+
+<h3>Independent Research</h3>
+
+<p>
+Self-directed investigations into biological questions using
+scientific literature and primary research.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Scientific Writing</h3>
+
+<p>
+Developing academic papers and literature reviews across
+different areas of biological science.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Quantitative Biology</h3>
+
+<p>
+Exploring how mathematical models and data analysis can be
+used to understand biological systems.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2>About</h2>
+
+<div class="about">
+
+<p>
+I am a Biological Sciences undergraduate at Imperial College London.
+I created this portfolio to document my independent reading,
+scientific writing and research interests throughout my degree.
+</p>
+
+<p>
+My aim is to use independent research as a way of exploring areas
+of biology beyond the core curriculum and developing the skills
+needed for future research.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+© 2026 Raees · Biological Sciences
+
+</div>
+
+</footer>
 
 </body>
 </html>
